@@ -11,6 +11,11 @@ export default class Counter extends Component {
       <div className="counter">
         <span className={this.getBadgeClasses}>{this.formatCount}</span>
         <button className="btn bg-secondary btn-sm">+</button>
+        <ul>
+          {this.state.tags.map((tag) => (
+            <li>{tag}</li>
+          ))}
+        </ul>
       </div>
     );
   }
